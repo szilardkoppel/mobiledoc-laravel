@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\GithubController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -29,3 +30,6 @@ Route::middleware('auth')->group(function () {
     Volt::route('confirm-password', 'pages.auth.confirm-password')
         ->name('password.confirm');
 });
+
+Route::get('/auth/github', [GithubController::class, 'redirect'])->name('auth.github');
+Route::get('/auth/github/callback', [GithubController::class, 'callback']);

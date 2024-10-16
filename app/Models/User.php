@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'github_id', // Add 'github_id' to the fillable array.
     ];
 
     /**

@@ -63,6 +63,11 @@ new #[Layout('layouts.guest')] class extends Component
                 </a>
             @endif
 
+            <a href="{{ route('auth.github') }}" class="inline-flex items-center px-2 float-left py-2 bg-gray-100 hover:bg-gray-200 border border-gray-300 tracking-widest focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ease-in-out h-10 mt-2 font-semibold text-xs transition-colors duration-150 rounded-lg uppercase focus:shadow-outline0 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-100 text-black">
+                <img src="https://www.cdnlogo.com/logos/g/55/github.svg" alt="GitHub Login" class="w-6 p-1 text-white">
+                Login with GitHub
+            </a>
+
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
